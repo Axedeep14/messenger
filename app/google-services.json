@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "95656034097",
+    "firebase_url": "https://messager-633ee.firebaseio.com",
+    "project_id": "messager-633ee",
+    "storage_bucket": "messager-633ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95656034097:android:3786c7ec849ca5f8",
+        "android_client_info": {
+          "package_name": "com.dp.messager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95656034097-1nmk8lae7b2b41dod4q7fth45m1dvgbo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dp.messager",
+            "certificate_hash": "6629939751e894a36328b718ce018c96472bd0a0"
+          }
+        },
+        {
+          "client_id": "95656034097-30vgcci9evb4s4l2n8329gt1vm008ru4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9yOlJscd3ARykKtpdvArsJ29Ko-JNcFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95656034097-30vgcci9evb4s4l2n8329gt1vm008ru4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
