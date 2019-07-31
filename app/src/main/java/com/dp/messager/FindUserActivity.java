@@ -75,9 +75,16 @@ public class FindUserActivity extends AppCompatActivity {
                         if(childSnapshot.child("phone").getValue()!=null)
                             phone=childSnapshot.child("phone").getValue().toString();
                         if(childSnapshot.child("name").getValue()!=null)
-                            phone=childSnapshot.child("phone").getValue().toString();
+                            name=childSnapshot.child("name").getValue().toString();
 
-                        UserObject mUser = new UserObject(name,phone);
+                        UserObject mUser =new UserObject(name,phone);
+                        if(name.equals(phone))
+                            for(UserObject mContactIterator : contactList){
+                                if(mContactIterator.getPhone().equals(mUser.getPhone())){
+                                    mUser.setName(mContactIterator.getName());
+                                }
+                            }
+
                         userList.add(mUser);
                         mUserListAdapter.notifyDataSetChanged();
                         return;
@@ -105,7 +112,7 @@ public class FindUserActivity extends AppCompatActivity {
         mUserList =findViewById(R.id.userlist);
         mUserList.setNestedScrollingEnabled(false);
         mUserList.setHasFixedSize(false);
-        mUserListLayoutManager =new LinearLayoutManager(getApplicationContext(),LinearLayout.VERTICAL,false);
+        mUserListLayoutManager =new LinearLayoutManager(getApplicationContext(),RecyclerView.VERTICAL,false);
         mUserList.setLayoutManager(mUserListLayoutManager);
         mUserListAdapter=new USerListAdapter(userList);
         mUserList.setAdapter(mUserListAdapter);
